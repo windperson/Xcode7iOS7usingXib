@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2133D86B1DEC0C8600A29C61 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2133D8691DEC0C8600A29C61 /* GLKit.framework */; };
+		2133D86C1DEC0C8600A29C61 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2133D86A1DEC0C8600A29C61 /* OpenGLES.framework */; };
+		2133D8701DEC561C00A29C61 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2133D86F1DEC561C00A29C61 /* Shader.fsh */; };
+		2133D8721DEC563B00A29C61 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 2133D8711DEC563B00A29C61 /* Shader.vsh */; };
 		215BAF651DE82740007EDB2E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 215BAF641DE82740007EDB2E /* Default-568h@2x.png */; };
 		215C4AA01DE81860002F00D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C4A9F1DE81860002F00D4 /* main.m */; };
 		215C4AA31DE81860002F00D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 215C4AA21DE81860002F00D4 /* AppDelegate.m */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2133D8691DEC0C8600A29C61 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		2133D86A1DEC0C8600A29C61 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		2133D86F1DEC561C00A29C61 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; lineEnding = 2; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		2133D8711DEC563B00A29C61 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; lineEnding = 2; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
 		215BAF641DE82740007EDB2E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		215C4A9B1DE81860002F00D4 /* xcode7demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xcode7demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		215C4A9F1DE81860002F00D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -33,16 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2133D86B1DEC0C8600A29C61 /* GLKit.framework in Frameworks */,
+				2133D86C1DEC0C8600A29C61 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2133D86D1DEC0C9000A29C61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2133D86A1DEC0C8600A29C61 /* OpenGLES.framework */,
+				2133D8691DEC0C8600A29C61 /* GLKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2133D86E1DEC560900A29C61 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				2133D8711DEC563B00A29C61 /* Shader.vsh */,
+				2133D86F1DEC561C00A29C61 /* Shader.fsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
 		215C4A921DE81860002F00D4 = {
 			isa = PBXGroup;
 			children = (
 				215C4A9D1DE81860002F00D4 /* xcode7demo */,
+				2133D86D1DEC0C9000A29C61 /* Frameworks */,
 				215C4A9C1DE81860002F00D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +87,7 @@
 		215C4A9D1DE81860002F00D4 /* xcode7demo */ = {
 			isa = PBXGroup;
 			children = (
+				2133D86E1DEC560900A29C61 /* Shaders */,
 				215C4AA11DE81860002F00D4 /* AppDelegate.h */,
 				215C4AA21DE81860002F00D4 /* AppDelegate.m */,
 				21847F351DE81B5500B8BCA8 /* MainViewController.h */,
@@ -136,9 +166,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2133D8701DEC561C00A29C61 /* Shader.fsh in Resources */,
 				215C4AAB1DE81860002F00D4 /* Assets.xcassets in Resources */,
 				21847F391DE81B5500B8BCA8 /* MainViewController.xib in Resources */,
 				215BAF651DE82740007EDB2E /* Default-568h@2x.png in Resources */,
+				2133D8721DEC563B00A29C61 /* Shader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +227,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -234,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

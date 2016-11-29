@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@import GLKit;
+@import OpenGLES;
 
-@interface MainViewController : UIViewController
+@interface MainViewController : GLKViewController
 
 @end
